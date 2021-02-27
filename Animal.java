@@ -5,9 +5,15 @@ import java.lang.Math;
 public abstract class Animal {
   
   private int position;
+  protected static int id = 0;
 
   public Animal(int position) {
     this.position = position;
+  }
+
+  public  int getAnimalId() {
+    int id = this.id++;
+    return id;
   }
 
   public void move(int riverSize) {

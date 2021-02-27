@@ -4,12 +4,14 @@ package eco;
 
 public class Bear extends Animal {
 
-  private static int id = 0;
-
+  private int id;
   public Bear(int position) {
     super(position);
-    System.out.println("Bear " + id++ + " created at position " + position);
+    this.id = super.getAnimalId();
+    System.out.println("Bear " + id + " created at position " + position);
   } 
 
-
+  public int getId() {
+    return this.id;
+  }
 }
